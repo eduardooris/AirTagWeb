@@ -1,7 +1,10 @@
-import { Button as ButtonStrap } from "react-bootstrap"
+import React from "react"
+import Style from "./button.module.css"
 
-export default function Button({ children, onClick, disabled }) {
+function Button ({ children, onClick, disabled }) {
     return (
-        <ButtonStrap onClick={onClick} disabled={disabled}>{children}</ButtonStrap>
+        <button className={Style.button} onClick={onClick} disabled={disabled}>{children}</button>
     )
 }
+
+export default Button

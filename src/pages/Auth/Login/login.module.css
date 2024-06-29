@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    background-size: 100% 100%;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    border: 5px solid #000;
+
+}
+
+.card {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    background-color: #FFFFFF;
+}
+
+.imgLog {
+    display: flex;
+    width: 550px;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    background-color: #028109;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.registre {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #028109;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.registre:hover {
+    text-decoration: underline;
+    color: #3dc344;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.entrar {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+span {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.infoLog {
+   font-size: 10px;
+   margin-bottom: 25px;
+}
+
+.textLog {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
