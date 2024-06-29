@@ -1,4 +1,4 @@
-[
+export const mock = [
     {
         "bandtime": "2024-03-28 00:51:43",
         "cid": "",
