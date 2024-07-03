@@ -1,20 +1,10 @@
-import Form from 'react-bootstrap/Form';
+import React from 'react'
+import Style from './input.module.css'
 
 function Input({ label, value, onChange, name, id, placeholder, type, helpText, description }) {
     return (
         <>
-            <Form.Label htmlFor="inputPassword5">{placeholder}</Form.Label>
-            <Form.Control
-                type={type}
-                id={id}
-                value={value}
-                name={name}
-                aria-describedby="passwordHelpBlock"
-                onChange={onChange}
-            />
-            <Form.Text muted>
-                {description}
-            </Form.Text>
+        <input type={type} placeholder={placeholder} style={Style} onChange={onChange} className={Style.input} value={value} name={name}></input>
         </>
     );
 }

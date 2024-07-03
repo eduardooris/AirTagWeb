@@ -1,6 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button";
 import Input from "../../../components/Input";
+import Style from "./login.module.css";
+import Img from "../../../assets/img/map.png";
+import Logo from "../../../assets/img/localizer.png";
 import { useForm } from "../../../hooks/useForm";
 import { login } from "../../../services/login";
 
@@ -29,13 +32,20 @@ export default function Login() {
 
 
     return (
-        <>
-            <h1>Login</h1>
-            <p>
-                <Input placeholder={"Usuário"} name="username" onChange={setForm} />
-                <Input placeholder={"Senha"} name='password' onChange={setForm} />
-                <Button onClick={useLogin}>Fazer login</Button>
-            </p>
-        </>
+        <div className={Style.container}>
+            <div className={Style.card}>
+                <img src={Logo} alt="logo" className={Style.logo} />
+                <Input type="text" placeholder={"Login"} name="username" onChange={setForm} />
+                <Input type="password" placeholder={"Senha"} name='password' onChange={setForm} />
+                <div className={Style.fzLog}><Button onClick={useLogin}>Entrar</Button></div>
+                {/* <div className={Style.entrar}>
+                        <span>Não tem uma conta?</span>
+                    <button className={Style.registre}>Registre-se</button>
+                    </div> */}
+            </div>
+            <div className={Style.imgLog}>
+            <img src={Img} alt="img-map" className={Style.imgMap} />
+            </div>
+        </div>
     )
 }
